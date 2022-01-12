@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Media;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Guitarist
 {
@@ -33,7 +34,7 @@ namespace Guitarist
                 }
             }
         }
-        private void GenerateBTN_Click(object sender, EventArgs e)
+        async void GenerateBTN_Click(object sender, EventArgs e)
         {
             string[] Tabs = Tabs_TB.Lines;
             string _string = "e";
@@ -82,24 +83,21 @@ namespace Guitarist
                             break;
                         //Waiting
                         case '-':
-                            Application.DoEvents();
-                            Thread.Sleep(500);
+                            await WaitBeforePlay(500);
                             break;
                         case '–':
-                            Application.DoEvents();
-                            Thread.Sleep(800);
+                            await WaitBeforePlay(750);
                             break;
                         case '—':
-                            Application.DoEvents();
-                            Thread.Sleep(1000);
+                            await WaitBeforePlay(1000);
                             break;
                         //Playing
                         default:
                             try
                             {
                                 int offset = int.Parse(Tabs[i][j].ToString());
-                                int stringIndex = StringToPlay(_string);
-                                Notes[stringIndex * 20 + offset].Play();
+                                int Index = StringToPlay(_string) * 20 + offset;
+                                Notes[Index].Play();
                             }
                             catch(Exception ex)
                             {
@@ -110,8 +108,7 @@ namespace Guitarist
                             break;
                     }
                 }
-                Application.DoEvents();
-                Thread.Sleep(800);
+                await WaitBeforePlay(500);
             }
         }
         int StringToPlay(string noteStr)
@@ -123,6 +120,18 @@ namespace Guitarist
                     return i;
             }
             return -1;
+        }
+
+        async Task WaitBeforePlay(int _delay)
+        {
+            try
+            {
+                await Task.Delay(_delay);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
