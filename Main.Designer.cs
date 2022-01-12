@@ -1,7 +1,7 @@
 ﻿
 namespace Guitarist
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@ namespace Guitarist
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Tabs_TB = new System.Windows.Forms.TextBox();
             this.GenerateBTN = new System.Windows.Forms.Button();
             this.TitleTXT = new System.Windows.Forms.Label();
@@ -98,7 +98,7 @@ namespace Guitarist
             this.pictureBox2.TabIndex = 4;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -109,8 +109,10 @@ namespace Guitarist
             this.Controls.Add(this.TitleTXT);
             this.Controls.Add(this.GenerateBTN);
             this.Controls.Add(this.Tabs_TB);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.MaximizeBox = false;
+            this.Name = "Main";
             this.Text = "Guitarist";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

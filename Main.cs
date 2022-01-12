@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Guitarist
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
         const string NotesPath = @"C:\Users\hp\Desktop\ABC\C#\Guitarist\Resources\Notes\";
         SoundPlayer[] Notes;
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
