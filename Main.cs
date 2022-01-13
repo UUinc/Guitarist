@@ -17,10 +17,10 @@ namespace Guitarist
         private void Form1_Load(object sender, EventArgs e)
         {
             string notesPath;
-            string baseNotes = "eBGDAE";
+            string baseNotes = "eBGDA3";
             Notes = new SoundPlayer[120];
 
-            for (int i = 0; i < 13; i++)
+            for (int i = 0; i < 120; i++)
             {
                 try
                 {
@@ -83,13 +83,13 @@ namespace Guitarist
                             break;
                         //Waiting
                         case '-':
-                            await WaitBeforePlay(500);
+                            await WaitBeforePlay(400);
                             break;
                         case '–':
-                            await WaitBeforePlay(750);
+                            await WaitBeforePlay(500);
                             break;
                         case '—':
-                            await WaitBeforePlay(1000);
+                            await WaitBeforePlay(750);
                             break;
                         //Playing
                         default:
@@ -108,7 +108,7 @@ namespace Guitarist
                             break;
                     }
                 }
-                await WaitBeforePlay(500);
+                await WaitBeforePlay(400);
             }
         }
         int StringToPlay(string noteStr)
