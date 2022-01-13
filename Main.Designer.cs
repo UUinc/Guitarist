@@ -31,7 +31,7 @@ namespace Guitarist
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.Tabs_TB = new System.Windows.Forms.TextBox();
-            this.GenerateBTN = new System.Windows.Forms.Button();
+            this.PlayBTN = new System.Windows.Forms.Button();
             this.TitleTXT = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -42,8 +42,9 @@ namespace Guitarist
             // Tabs_TB
             // 
             this.Tabs_TB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.Tabs_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.Tabs_TB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.Tabs_TB.Font = new System.Drawing.Font("Lucida Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Tabs_TB.ForeColor = System.Drawing.Color.Black;
             this.Tabs_TB.Location = new System.Drawing.Point(184, 80);
             this.Tabs_TB.MaximumSize = new System.Drawing.Size(876, 550);
             this.Tabs_TB.Multiline = true;
@@ -51,20 +52,20 @@ namespace Guitarist
             this.Tabs_TB.Size = new System.Drawing.Size(438, 225);
             this.Tabs_TB.TabIndex = 0;
             // 
-            // GenerateBTN
+            // PlayBTN
             // 
-            this.GenerateBTN.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.GenerateBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.GenerateBTN.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GenerateBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.GenerateBTN.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GenerateBTN.Location = new System.Drawing.Point(308, 342);
-            this.GenerateBTN.Name = "GenerateBTN";
-            this.GenerateBTN.Size = new System.Drawing.Size(198, 40);
-            this.GenerateBTN.TabIndex = 1;
-            this.GenerateBTN.Text = "Generate";
-            this.GenerateBTN.UseVisualStyleBackColor = false;
-            this.GenerateBTN.Click += new System.EventHandler(this.GenerateBTN_Click);
+            this.PlayBTN.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.PlayBTN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PlayBTN.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PlayBTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PlayBTN.Font = new System.Drawing.Font("Britannic Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayBTN.Location = new System.Drawing.Point(308, 342);
+            this.PlayBTN.Name = "PlayBTN";
+            this.PlayBTN.Size = new System.Drawing.Size(198, 40);
+            this.PlayBTN.TabIndex = 1;
+            this.PlayBTN.Text = "Play";
+            this.PlayBTN.UseVisualStyleBackColor = false;
+            this.PlayBTN.Click += new System.EventHandler(this.GenerateBTN_Click);
             // 
             // TitleTXT
             // 
@@ -107,7 +108,7 @@ namespace Guitarist
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.TitleTXT);
-            this.Controls.Add(this.GenerateBTN);
+            this.Controls.Add(this.PlayBTN);
             this.Controls.Add(this.Tabs_TB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -125,7 +126,7 @@ namespace Guitarist
         #endregion
 
         private System.Windows.Forms.TextBox Tabs_TB;
-        private System.Windows.Forms.Button GenerateBTN;
+        private System.Windows.Forms.Button PlayBTN;
         private System.Windows.Forms.Label TitleTXT;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
