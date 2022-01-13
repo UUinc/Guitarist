@@ -21,6 +21,9 @@ just wriet down your frets from 0 to 19 by default the 'high e' note will play y
 
 #### DON'T FORGET TO CLOSE THE OPENED STRING ex : "(1-0-1)-5-4"
 
+ > Want ready tabs ? check out this website : <a href="https://1-string.com/" target="_blank">1-string</a>
+
+
 if you have any question feel free to ask :smile:
 ### Contacts
 * uu.soft.inc@gmail.com
